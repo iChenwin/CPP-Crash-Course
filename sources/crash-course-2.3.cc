@@ -29,7 +29,14 @@ void swap_ptr( int * a, int * b )
     *a = *b;
     *b = c;
 }
-
+/* 
+ * int*&  value这样一个声明，
+ * 我们从最接近value的符号看起，是个&，
+ * 说明value是一个引用，它是一个什么引用呢？
+ * 再看*，它是一个指针的引用，即指针的别名，
+ * 我们用*value就可以访问到实参的值了，也就是指针本身。
+ * 此函数交换了两个指针
+ */
 void swap_ref_ptr( int * & a, int * & b )
 {
     int *c = a;
